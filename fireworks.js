@@ -13,8 +13,12 @@ function generateFireworks() {
   // Flight Duration/Height
   flight = getRandomInt(3) + 1;
 
-  //Generates the Explosions
+  //Generates the Explosions  
   explosions = getRandomInt(3) + 1;
+
+  document.getElementById('flight-duration').value = flight;
+  document.getElementById('explosions').value = explosions;
+
   for (var i=1; i<=explosions; i=i+1) {
     
     var type = getRandomInt(5);
@@ -25,7 +29,7 @@ function generateFireworks() {
     var color1 = '';
     var color2 = '';
       
-    for (var i=0; i<=color1Count - 1; i=i+1) {
+    for (var j=0; j<=color1Count - 1; j++) {
       var colorIndex = getRandomInt(16);
           if (color1.length == 0) {
             color1 = 'I;' + colors[colorIndex];
@@ -35,7 +39,7 @@ function generateFireworks() {
         
     }
       
-    for (var i=0; i<=color2Count - 1; i=i+1) {
+    for (var k=0; k<=color2Count - 1; k++) {
       var colorIndex = getRandomInt(16);
         if (color2.length == 0) {
           color2 = 'I;' + colors[colorIndex];
