@@ -46,8 +46,6 @@ function generateFireworks() {
         } else {
           color2 = color2 +  "," + colors[colorIndex];
         }
-
-        console.log(colors[colorIndex])
     }
 
     if (explosionArray.length === 0) {
